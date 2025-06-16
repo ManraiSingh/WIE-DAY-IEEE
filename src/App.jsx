@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import Home from '../Home'
-
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home.jsx';
+import Level1 from './Levels/Level1.jsx'; // or './Levels/Level1.jsx' if it's inside a folder
 
 const App = () => {
-
   return (
-    <>
-    <Home />
-    </>
-  )
-}
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/level1" element={<Level1 />} />
+    </Routes>
+  );
+};
 
-export default App
+export default App;
