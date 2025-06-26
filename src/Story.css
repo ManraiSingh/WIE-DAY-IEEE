@@ -1,0 +1,62 @@
+
+
+.echo-page {
+  max-height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+  padding: 50px;
+}
+
+.echo-bot-section {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  margin-top: 500px;
+}
+
+.echo-img {
+  width: 550px;
+  animation: bounce 2.5s ease-in-out infinite;
+  /* margin-right: 200px; */
+}
+
+/* Bot bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.chat-bubble {
+  background: white;
+  color: #333;
+  padding: 20px 70px;
+  border-radius: 25px;
+  /* margin-top: 100px; */
+  font-size: 1.5rem;
+  text-align: center;
+  position: relative;
+  max-width: 700px;
+  margin-left: -150px;
+  margin-bottom: 500px;
+  /* margin-left: 400px; */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 20%;
+  transform: translateX(-50%);
+  border-width: 20px 20px 0;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
